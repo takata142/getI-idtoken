@@ -10,16 +10,21 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static('public'))
 app.use(express.json()) 
 app.use(express.urlencoded({extended:true}))　
-app.post('/api',(req,res)=> get_response(req,res))
+app.post('/api',(req,res)=> getUserInfo(req,res))
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 
 
-function get_response(req,res){
+const getUserInfo = (req,res) => {
     const data = req.body;
-    console.log(data.id_token)
-}
+    console.log('id_token:',data.id_token);
+   }
 
-get_response()
+// function get_response(req,res){
+//     const data = req.body;
+//     console.log(data.id_token)
+// }
+
+// get_response()
 
 // function get_response(req,res) {
 //   const data = req.body;
