@@ -19,9 +19,9 @@ const LineNotifyConfig ={
 
 const getUserInfo = (req,res) => {
     const idToken = req.body;
+    console.log(idToken.id_token)
 
     function get_response(){
-
         let headers = {
             'Content-Type': 'application/x-www-form-urlencoded'
         };
