@@ -14,10 +14,15 @@ app.post('/api',(req,res)=> getUserInfo(req,res))
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 
 
-const getUserInfo = (req,res) => {
+// const getUserInfo = (req,res) => {
+//     const data = req.body;
+//     console.log('id_token:',data.id_token);
+//    }
+
+function getUserInfo(req,res){
     const data = req.body;
-    console.log('id_token:',data.id_token);
-   }
+    console.log(data.id_token)
+}
 
 // function get_response(req,res){
 //     const data = req.body;
