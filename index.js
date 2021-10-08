@@ -25,39 +25,41 @@ app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 // }
 
 const LineNotifyConfig ={
-    client_id: '1656488947'
+    client_id: `${process.env.LOGIN_CHANNEL_ID}`
 }
 
-function get_response(req,res){
+console.log(LineNotifyConfig.client_id)
 
-    const idToken = req.body;
+// function get_response(req,res){
 
-    let headers = {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    };
+//     const idToken = req.body;
 
-    let dataString = 'id_token=' + idToken.id_token;
-    dataString += '&client_id=' + LineNotifyConfig.client_id;
+//     let headers = {
+//         'Content-Type': 'application/x-www-form-urlencoded'
+//     };
 
-    let options ={
-        url:'https://api.line.me/oauth2/v2.1/verify',
-        method: 'POST',
-        headers: headers,
-        body: dataString
-    }
+//     let dataString = 'id_token=' + idToken.id_token;
+//     dataString += '&client_id=' + LineNotifyConfig.client_id;
 
-    function callback(error,response,body){
-        if(response.statusCode == 200){
-            console.log(body,"200 OK");
-        }else{
-            console.log("error")
-        }
-    }
+//     let options ={
+//         url:'https://api.line.me/oauth2/v2.1/verify',
+//         method: 'POST',
+//         headers: headers,
+//         body: dataString
+//     }
 
-
-    request(options,callback)
-
-}
+//     function callback(error,response,body){
+//         if(response.statusCode == 200){
+//             console.log(body,"200 OK");
+//         }else{
+//             console.log("error")
+//         }
+//     }
 
 
-get_response()
+//     request(options,callback)
+
+// }
+
+
+// get_response()
