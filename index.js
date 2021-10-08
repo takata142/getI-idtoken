@@ -50,7 +50,7 @@ function get_response(req,res){
         if(response.statusCode == 200){
             console.log(body,"200 OK");
         }else{
-            console.log(response)
+            console.log("error")
         }
     }
 
