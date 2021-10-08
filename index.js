@@ -16,7 +16,7 @@ app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 
 const getUserInfo = (req,res) => {
     const data = req.body;
-    console.log('id_token:',data.id_token);
+    //console.log('id_token:',data.id_token);
    }
 
 // function getUserInfo(req,res){
@@ -24,7 +24,7 @@ const getUserInfo = (req,res) => {
 //     console.log(data.id_token)
 // }
 
-console.log(getUserInfo.data.id_token)
+console.log(getUserInfo)
 
 const LineNotifyConfig ={
     client_id: `${process.env.LOGIN_CHANNEL_ID}`
