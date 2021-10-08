@@ -24,7 +24,7 @@ const getUserInfo = (req,res) => {
 //     console.log(data.id_token)
 // }
 
-console.log(data.id_token)
+console.log(getUserInfo.data.id_token)
 
 const LineNotifyConfig ={
     client_id: `${process.env.LOGIN_CHANNEL_ID}`
