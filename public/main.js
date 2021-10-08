@@ -1,5 +1,4 @@
 window.onload = () => {
-    //const myLiffId = '1656488947-l1qRdZM5';
     const myLiffId = '1656488947-Gq08PrKN';
     const divPage = document.getElementById('liff-page');
     
@@ -14,7 +13,6 @@ window.onload = () => {
           liffId: myLiffId
       })
       .then(() => {
-            //idトークンによる年齢情報の取得
         const idToken = liff.getIDToken();
         const jsonData = JSON.stringify({
         id_token: idToken
