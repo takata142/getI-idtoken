@@ -14,21 +14,23 @@ app.post('/api',(req,res)=> get_response(req,res))
 app.listen(PORT,()=>console.log(`Listening on ${PORT}`));
 
 
-// const getUserInfo = (req,res) => {
-//     const data = req.body;
-//     console.log('id_token:',data.id_token);
-//    }
+const getUserInfo = (req,res) => {
+    const data = req.body;
+    console.log('id_token:',data.id_token);
+   }
 
 // function getUserInfo(req,res){
 //     const data = req.body;
 //     console.log(data.id_token)
 // }
 
+console.log(data.id_token)
+
 const LineNotifyConfig ={
     client_id: `${process.env.LOGIN_CHANNEL_ID}`
 }
 
-console.log(LineNotifyConfig.client_id)
+// console.log(LineNotifyConfig.client_id)
 
 // function get_response(req,res){
 
